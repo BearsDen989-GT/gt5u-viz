@@ -8,6 +8,7 @@ var fuel
 var metal
 var amount
 var consumption
+var debug = false
 
 # Control elements to shortcut finding them later
 var warningLabel
@@ -37,8 +38,9 @@ func update_warning():
 		text += "\nPlease specify a fuel amount, or EU generated is 0"
 	
 	if consumption:
-		if consumption["consumed"] > consumption["optimal"]:
-			text +="\nYou are consuming more fuel than flow (%d) by %dL. \nFind a larger turbine, or reduce fluid input. (This overage is not converted to energy)" % [metal["flow"], (consumption["consumed"] - metal["flow"])]
+		var effective = consumption["consumed"] - consumption["optimal"]
+		if effective != 0:
+			text +="\nYou are consuming more fuel than flow (%d) by %dL. \nFind a larger turbine, or reduce fluid input. (This overage is not converted to energy)" % [consumption["optimal"], effective]
 	
 	if text:
 		text = "WARNING: \n" + text
@@ -54,7 +56,8 @@ func update_display():
 		text += "\nDurability: %s" % metal["durability"]
 		text += "\nEfficiency: %d" % metal["efficiency"]
 		text += "\nFlow: %s" % metal["flow"]
-		text += "\n\n%s\n" % metal
+		if debug:
+			text += "\n\n%s\n" % metal
 	
 	if fuel:
 		text += "\nFuel: %s" % fuel["name"]
@@ -74,6 +77,7 @@ func update_display():
 				text += "\nYou should increase your flow, you are penalized for not reaching optimal"
 			else:
 				text += "\nYou should decrease your flow, 25% over 100% is just voided"
-		text += "\n%s\n" % consumption
+		if debug:
+			text += "\n%s\n" % consumption
 	
 	displayLabel.text = text
