@@ -1,0 +1,295 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TurbineUsage.gd" type="Script" id=1]
+[ext_resource path="res://InfoPannel.gd" type="Script" id=2]
+[ext_resource path="res://main.gd" type="Script" id=3]
+
+[node name="Main" type="Control"]
+anchor_top = 0.00176575
+anchor_right = 1.0
+anchor_bottom = 1.00177
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="HBoxContainer"]
+margin_right = 640.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 640, 480 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="This tab is here to annoy you" type="Tabs" parent="HBoxContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TurbineUsage" type="Control" parent="HBoxContainer/TabContainer/This tab is here to annoy you"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer"]
+margin_right = 632.0
+margin_bottom = 72.0
+size_flags_vertical = 5
+custom_constants/separation = 16
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer"]
+margin_right = 160.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_right = 160.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_top = 3.0
+margin_right = 80.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Material Tier"
+valign = 1
+
+[node name="tierControl" type="OptionButton" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+margin_left = 84.0
+margin_right = 160.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "HV"
+items = [ "HV", null, false, 0, false, "EV", null, false, 0, false, "LuV+", null, false, 0, false ]
+selected = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer"]
+margin_left = 176.0
+margin_right = 336.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 160.0
+margin_bottom = 20.0
+
+[node name="Label2" type="Label" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_top = 3.0
+margin_right = 78.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Turbine Size"
+valign = 1
+
+[node name="turbineSizeControl" type="OptionButton" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 82.0
+margin_right = 160.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Small"
+items = [ "Small", null, false, 0, false, "Normal", null, false, 0, false, "Large", null, false, 0, false, "Huge", null, false, 0, false ]
+selected = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 24.0
+margin_right = 160.0
+margin_bottom = 55.0
+
+[node name="infoSizeLabel" type="Label" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+margin_right = 160.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+text = "Despite what you where told. Size matters."
+valign = 1
+autowrap = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer"]
+margin_left = 352.0
+margin_right = 614.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 230, 0 )
+
+[node name="VBoxContainer" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 262.0
+margin_bottom = 20.0
+
+[node name="Label3" type="Label" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+margin_top = 3.0
+margin_right = 98.0
+margin_bottom = 17.0
+text = "Generator Type"
+valign = 1
+
+[node name="generatorTypeControl" type="OptionButton" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+margin_left = 102.0
+margin_right = 262.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 160, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Steam"
+items = [ "Steam", null, false, 0, false, "Super Heated Steam", null, false, 0, false, "Farts", null, true, 0, false, "Plasma", null, true, 0, false ]
+selected = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 262.0
+margin_bottom = 44.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_top = 3.0
+margin_right = 98.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 98, 0 )
+text = "Fuel"
+
+[node name="fuelControl" type="OptionButton" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 102.0
+margin_right = 262.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Water"
+clip_text = true
+items = [ "Water", null, false, 0, null ]
+selected = 0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 262.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 98.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 98, 0 )
+text = "Flow per tick"
+
+[node name="qtyOnHandControl" type="SpinBox" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 102.0
+margin_right = 262.0
+margin_bottom = 24.0
+hint_tooltip = "How much of the material you have on hand, in ticks"
+size_flags_horizontal = 3
+size_flags_vertical = 0
+allow_greater = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="itemListControl" type="ItemList" parent="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer"]
+margin_top = 76.0
+margin_right = 632.0
+margin_bottom = 444.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+items = [ "Asdf", null, false, "Item 1", null, false, "Item 2", null, false ]
+same_column_width = true
+
+[node name="[Nothing to See here]" type="Tabs" parent="HBoxContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/TabContainer/[Nothing to See here]"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoPannel" type="Control" parent="HBoxContainer"]
+margin_left = 644.0
+margin_right = 644.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/InfoPannel"]
+margin_left = 4.0
+margin_right = 320.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="warningLabel" type="Label" parent="HBoxContainer/InfoPannel/VBoxContainer"]
+margin_right = 320.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Output goes here
+This should annoy Bear the most.
+
+Because he is a simple bear"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="displayLabel" type="Label" parent="HBoxContainer/InfoPannel/VBoxContainer"]
+margin_top = 242.0
+margin_right = 320.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 320, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Output goes here
+This should annoy Bear the most.
+
+Because he is a simple bear"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="item_selected" from="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer3/HBoxContainer/tierControl" to="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage" method="_on_tierControl_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/turbineSizeControl" to="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage" method="_on_turbineSizeControl_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer/generatorTypeControl" to="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage" method="_on_generatorTypeControl_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/fuelControl" to="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage" method="_on_fuelControl_item_selected"]
+[connection signal="value_changed" from="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/qtyOnHandControl" to="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage" method="_on_qtyOnHandControl_value_changed"]
+[connection signal="item_selected" from="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage/VBoxContainer/itemListControl" to="HBoxContainer/TabContainer/This tab is here to annoy you/TurbineUsage" method="_on_itemListControl_item_selected"]
